@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Generator">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: grey;">
+            <children>
+                <TabPane layoutX="30.0" layoutY="48.0" prefHeight="556.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="100.0">
+                    <tabs>
+                        <Tab text="Number">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TitledPane fx:id="random_number" expanded="false" layoutY="31.0" prefHeight="217.0" prefWidth="575.0" text="Random Number" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_number" layoutX="23.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="min_number" layoutX="343.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="max_number" layoutX="23.0" layoutY="143.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="Min Value" />
+                                                        <Label layoutX="23.0" layoutY="112.0" prefHeight="26.0" prefWidth="218.0" text="Max value" />
+                                                        <RadioButton fx:id="n_flag_number" layoutX="343.0" layoutY="140.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="118.0" text="Include N Flag" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TextArea fx:id="print_test_num" layoutX="630.0" layoutY="31.0" prefHeight="400.0" prefWidth="335.0" />
+                                        <Button fx:id="gen_num" layoutX="630.0" layoutY="446.0" mnemonicParsing="false" onAction="#generate_number" text="Generate" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Array">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TitledPane fx:id="random_array" expanded="false" layoutY="31.0" prefHeight="211.0" prefWidth="578.0" text="Random Array" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="648.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_array" layoutX="23.0" layoutY="30.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="array_size" layoutX="338.0" layoutY="30.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="min_array" layoutX="23.0" layoutY="102.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="max_array" layoutX="338.0" layoutY="102.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="338.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="Arr Size" />
+                                                        <Label layoutX="23.0" layoutY="70.0" prefHeight="26.0" prefWidth="218.0" text="Min value" />
+                                                        <Label layoutX="338.0" layoutY="70.0" prefHeight="26.0" prefWidth="218.0" text="Max Value" />
+                                                        <RadioButton fx:id="n_flag_array" layoutX="23.0" layoutY="143.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" text="Include N Flag" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="random_matrix" expanded="false" layoutY="269.0" prefHeight="239.0" prefWidth="578.0" text="Random Matrix" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="648.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_matrix" layoutX="23.0" layoutY="27.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="rows_matrix" layoutX="333.0" layoutY="27.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="min_matrix" layoutX="23.0" layoutY="97.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="col_matrix" layoutX="333.0" layoutY="97.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="333.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="Num Rows" />
+                                                        <Label layoutX="23.0" layoutY="64.0" prefHeight="26.0" prefWidth="218.0" text="Min Value" />
+                                                        <Label layoutX="333.0" layoutY="64.0" prefHeight="26.0" prefWidth="218.0" text="Num Columns" />
+                                                        <Label layoutX="23.0" layoutY="136.0" prefHeight="26.0" prefWidth="218.0" text="Max Value" />
+                                                        <RadioButton fx:id="n_flag_matrix" layoutX="333.0" layoutY="152.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="167.0" text="Include N M Flag" />
+                                                        <TextField fx:id="max_matrix" layoutX="23.0" layoutY="165.0" prefHeight="15.0" prefWidth="208.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TextArea fx:id="print_test_array" layoutX="630.0" layoutY="31.0" prefHeight="400.0" prefWidth="335.0" />
+                                        <Button fx:id="gen_array" layoutX="630.0" layoutY="446.0" mnemonicParsing="false" onAction="#generate_array" text="Generate" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="String">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TitledPane fx:id="random_string" expanded="false" layoutY="31.0" prefHeight="194.0" prefWidth="578.0" text="Random String" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="648.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_str" layoutX="23.0" layoutY="40.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="str_size" layoutX="338.0" layoutY="40.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="characters" layoutX="23.0" layoutY="114.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="338.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="Str Size" />
+                                                        <Label layoutX="23.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" text="Characters" />
+                                                        <RadioButton fx:id="n_flag_string" layoutX="338.0" layoutY="108.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" text="Include N Flag" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="random_charmatrix" expanded="false" layoutY="269.0" prefHeight="211.0" prefWidth="578.0" text="Random Array of Strings" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="648.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_charmatrix" layoutX="23.0" layoutY="40.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="row_charmatrix" layoutX="343.0" layoutY="40.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="characters_matrix" layoutX="23.0" layoutY="105.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="col_charmatrix" layoutX="343.0" layoutY="105.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="4.0" prefHeight="26.0" prefWidth="218.0" text="Num Rows" />
+                                                        <Label layoutX="23.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" text="Characters" />
+                                                        <Label layoutX="343.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" text="Num Columns" />
+                                                        <RadioButton fx:id="n_flag_charmatrix" layoutX="23.0" layoutY="150.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="180.0" text="Include N M Flag" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TextArea fx:id="print_test_string" layoutX="630.0" layoutY="31.0" prefHeight="400.0" prefWidth="335.0" />
+                                        <Button fx:id="gen_string" layoutX="630.0" layoutY="446.0" mnemonicParsing="false" onAction="#generate_string" text="Generate" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Tree">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="gen_tree" layoutX="630.0" layoutY="446.0" mnemonicParsing="false" onAction="#generate_tree" text="Generate" />
+                                        <TextArea fx:id="print_test_tree" layoutX="630.0" layoutY="31.0" prefHeight="400.0" prefWidth="335.0" />
+                                        <TitledPane fx:id="random_untree" expanded="false" layoutY="31.0" prefHeight="211.0" prefWidth="578.0" text="Random Unweighted Tree" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_un_tree" layoutX="23.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="nodes_un_tree" layoutX="343.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Nodes" />
+                                                        <RadioButton fx:id="n_flag_un_NE_tree" layoutX="343.0" layoutY="107.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Include N E flag" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="random_wtree" expanded="false" layoutY="279.0" prefHeight="211.0" prefWidth="578.0" text="Random Weighted Graph" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_w_tree" layoutX="23.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="nodes_w_tree" layoutX="343.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="max_w_tree" layoutX="23.0" layoutY="135.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Nodes" />
+                                                        <Label layoutX="23.0" layoutY="92.0" prefHeight="26.0" prefWidth="218.0" text="Max weight" />
+                                                        <RadioButton fx:id="n_flag_w_NE_tree" layoutX="343.0" layoutY="132.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Include N E flag" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Graph">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="gen_graph" layoutX="630.0" layoutY="446.0" mnemonicParsing="false" onAction="#generate_graph" text="Generate" />
+                                        <TextArea fx:id="print_test_graph" layoutX="630.0" layoutY="31.0" prefHeight="400.0" prefWidth="335.0" />
+                                        <TitledPane fx:id="random_ungraph" expanded="false" layoutY="31.0" prefHeight="211.0" prefWidth="578.0" text="Random Unweighted Graph" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_un_graph" layoutX="23.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="nodes_un_graph" layoutX="343.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="edges_un_graph" layoutX="23.0" layoutY="135.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Nodes" />
+                                                        <Label layoutX="23.0" layoutY="98.0" prefHeight="26.0" prefWidth="218.0" text="E Edges" />
+                                                        <RadioButton fx:id="n_flag_un_NE_graph" layoutX="343.0" layoutY="132.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Include N E flag" />
+                                                        <RadioButton fx:id="n_flag_un_dir" layoutX="343.0" layoutY="92.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Is Directed" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="random_wgraph" expanded="false" layoutY="282.0" prefHeight="211.0" prefWidth="578.0" text="Random Weighted Graph" textFill="#101d40">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="num_test_w_graph" layoutX="23.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="nodes_w_graph" layoutX="343.0" layoutY="53.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <TextField fx:id="edges_w_graph" layoutX="23.0" layoutY="122.0" prefHeight="15.0" prefWidth="208.0" />
+                                                        <Label layoutX="23.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Test Cases" />
+                                                        <Label layoutX="343.0" layoutY="17.0" prefHeight="26.0" prefWidth="218.0" text="N Nodes" />
+                                                        <Label layoutX="23.0" layoutY="92.0" prefHeight="26.0" prefWidth="218.0" text="E Edges" />
+                                                        <RadioButton fx:id="n_flag_w_NE_graph" layoutX="343.0" layoutY="247.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Include N E flag" />
+                                                        <RadioButton fx:id="n_flag_w_dir" layoutX="343.0" layoutY="119.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="187.0" text="Is Directed" />
+                                                        <TextField fx:id="max_w_graph" layoutX="23.0" layoutY="246.0" prefHeight="34.0" prefWidth="276.0" />
+                                                        <Label layoutX="23.0" layoutY="206.0" prefHeight="26.0" prefWidth="218.0" text="Max Weight" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
